@@ -23,6 +23,7 @@
     if (pdInit != PdAudioOK) {
         NSLog(@"Pd failed to initailize");
     }
+    NSLog(@"Booyah!");
     return YES;
 }
 

@@ -1,0 +1,4 @@
+1) Create a new pd patch (filePlay.pd, but could be called anything) in the LearningPDiOS folder
+2) Put a .wav file in that same folder
+3) Open that .wav in the pd patch
+4) In the Xcode project, right-click on the ‘MyPDProject’ group, select ‘Add Files to MyPDProject’, and add the filePlay.pd patch, and the .wav file.

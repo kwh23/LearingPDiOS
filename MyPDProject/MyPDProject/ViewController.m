@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.patch = [[PDPatch alloc]initWithFile:@"main.pd"];
+    self.patch = [[PDPatch alloc]initWithFile:@"filePlay.pd"];
 }
 
 - (void)didReceiveMemoryWarning {

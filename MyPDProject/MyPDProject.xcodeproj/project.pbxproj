@@ -19,6 +19,8 @@
 		8980212E1B66F5D10089A703 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8980212C1B66F5D10089A703 /* AVFoundation.framework */; };
 		898021301B66F7F60089A703 /* main.pd in Resources */ = {isa = PBXBuildFile; fileRef = 8980212F1B66F7F60089A703 /* main.pd */; };
 		898021331B66FA890089A703 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 898021321B66FA890089A703 /* PDPatch.m */; };
+		D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */ = {isa = PBXBuildFile; fileRef = D0C09AD61B6A40E600E5B054 /* filePlay.pd */; };
+		D0C09ADC1B6A41B200E5B054 /* testAudio_Stereo.wav in Resources */ = {isa = PBXBuildFile; fileRef = D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		8980212F1B66F7F60089A703 /* main.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.pd; sourceTree = "<group>"; };
 		898021311B66FA890089A703 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPatch.h; sourceTree = "<group>"; };
 		898021321B66FA890089A703 /* PDPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDPatch.m; sourceTree = "<group>"; };
+		D0C09AD61B6A40E600E5B054 /* filePlay.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = filePlay.pd; path = ../../filePlay.pd; sourceTree = "<group>"; };
+		D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = testAudio_Stereo.wav; path = ../testAudio_Stereo.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		898020ED1B66F53B0089A703 = {
 			isa = PBXGroup;
 			children = (
+				D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */,
 				8980212B1B66F5D10089A703 /* AudioToolbox.framework */,
 				8980212C1B66F5D10089A703 /* AVFoundation.framework */,
 				8980211F1B66F5690089A703 /* libpd.xcodeproj */,
@@ -119,6 +124,7 @@
 		898020F81B66F53C0089A703 /* MyPDProject */ = {
 			isa = PBXGroup;
 			children = (
+				D0C09AD61B6A40E600E5B054 /* filePlay.pd */,
 				898020FD1B66F53C0089A703 /* AppDelegate.h */,
 				898020FE1B66F53C0089A703 /* AppDelegate.m */,
 				898021311B66FA890089A703 /* PDPatch.h */,
@@ -275,6 +281,8 @@
 			files = (
 				898021051B66F53C0089A703 /* Main.storyboard in Resources */,
 				8980210A1B66F53C0089A703 /* LaunchScreen.xib in Resources */,
+				D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */,
+				D0C09ADC1B6A41B200E5B054 /* testAudio_Stereo.wav in Resources */,
 				898021301B66F7F60089A703 /* main.pd in Resources */,
 				898021071B66F53C0089A703 /* Images.xcassets in Resources */,
 			);

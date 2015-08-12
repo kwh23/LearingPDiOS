@@ -20,6 +20,7 @@
 		898021301B66F7F60089A703 /* main.pd in Resources */ = {isa = PBXBuildFile; fileRef = 8980212F1B66F7F60089A703 /* main.pd */; };
 		898021331B66FA890089A703 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 898021321B66FA890089A703 /* PDPatch.m */; };
 		89A2F7401B71B86700A651C4 /* Mist_form_wip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */; };
+		D0A2D5E41B7B1D5A00238AF1 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */; };
 		D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */ = {isa = PBXBuildFile; fileRef = D0C09AD61B6A40E600E5B054 /* filePlay.pd */; };
 		D0C09ADC1B6A41B200E5B054 /* testAudio_Stereo.wav in Resources */ = {isa = PBXBuildFile; fileRef = D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		898021311B66FA890089A703 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPatch.h; sourceTree = "<group>"; };
 		898021321B66FA890089A703 /* PDPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDPatch.m; sourceTree = "<group>"; };
 		89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mist_form_wip.wav; sourceTree = "<group>"; };
+		D0A2D5E21B7B1D5A00238AF1 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingView.h; path = MyPDProject/DrawingView.h; sourceTree = "<group>"; };
+		D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingView.m; path = MyPDProject/DrawingView.m; sourceTree = "<group>"; };
 		D0C09AD61B6A40E600E5B054 /* filePlay.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = filePlay.pd; path = ../../filePlay.pd; sourceTree = "<group>"; };
 		D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = testAudio_Stereo.wav; path = ../testAudio_Stereo.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +107,8 @@
 		898020ED1B66F53B0089A703 = {
 			isa = PBXGroup;
 			children = (
+				D0A2D5E21B7B1D5A00238AF1 /* DrawingView.h */,
+				D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */,
 				89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */,
 				D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */,
 				8980212B1B66F5D10089A703 /* AudioToolbox.framework */,
@@ -309,6 +314,7 @@
 				898021331B66FA890089A703 /* PDPatch.m in Sources */,
 				898021021B66F53C0089A703 /* ViewController.m in Sources */,
 				898020FF1B66F53C0089A703 /* AppDelegate.m in Sources */,
+				D0A2D5E41B7B1D5A00238AF1 /* DrawingView.m in Sources */,
 				898020FC1B66F53C0089A703 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

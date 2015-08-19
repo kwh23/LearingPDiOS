@@ -19,6 +19,7 @@
 		8980212E1B66F5D10089A703 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8980212C1B66F5D10089A703 /* AVFoundation.framework */; };
 		898021301B66F7F60089A703 /* main.pd in Resources */ = {isa = PBXBuildFile; fileRef = 8980212F1B66F7F60089A703 /* main.pd */; };
 		898021331B66FA890089A703 /* PDPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 898021321B66FA890089A703 /* PDPatch.m */; };
+		8991389E1B8462AA0028A37C /* testAudio_Stereo.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 8991389D1B8462AA0028A37C /* testAudio_Stereo.aiff */; };
 		89A2F7401B71B86700A651C4 /* Mist_form_wip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */; };
 		D0A2D5E41B7B1D5A00238AF1 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */; };
 		D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */ = {isa = PBXBuildFile; fileRef = D0C09AD61B6A40E600E5B054 /* filePlay.pd */; };
@@ -76,6 +77,7 @@
 		8980212F1B66F7F60089A703 /* main.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.pd; sourceTree = "<group>"; };
 		898021311B66FA890089A703 /* PDPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDPatch.h; sourceTree = "<group>"; };
 		898021321B66FA890089A703 /* PDPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDPatch.m; sourceTree = "<group>"; };
+		8991389D1B8462AA0028A37C /* testAudio_Stereo.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = testAudio_Stereo.aiff; sourceTree = "<group>"; };
 		89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mist_form_wip.wav; sourceTree = "<group>"; };
 		D0A2D5E21B7B1D5A00238AF1 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingView.h; path = MyPDProject/DrawingView.h; sourceTree = "<group>"; };
 		D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingView.m; path = MyPDProject/DrawingView.m; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */,
 				89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */,
 				D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */,
+				8991389D1B8462AA0028A37C /* testAudio_Stereo.aiff */,
 				8980212B1B66F5D10089A703 /* AudioToolbox.framework */,
 				8980212C1B66F5D10089A703 /* AVFoundation.framework */,
 				8980211F1B66F5690089A703 /* libpd.xcodeproj */,
@@ -291,6 +294,7 @@
 				8980210A1B66F53C0089A703 /* LaunchScreen.xib in Resources */,
 				D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */,
 				D0C09ADC1B6A41B200E5B054 /* testAudio_Stereo.wav in Resources */,
+				8991389E1B8462AA0028A37C /* testAudio_Stereo.aiff in Resources */,
 				89A2F7401B71B86700A651C4 /* Mist_form_wip.wav in Resources */,
 				898021301B66F7F60089A703 /* main.pd in Resources */,
 				898021071B66F53C0089A703 /* Images.xcassets in Resources */,

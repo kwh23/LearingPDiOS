@@ -30,4 +30,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)resetPlayCont:(UIButton *)sender {
+    NSLog(@"Resetting the play cont, will be 0 on next load");
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber* fibNum = [NSNumber numberWithFloat:0.f];
+    [defaults setObject:fibNum forKey:@"fib_play_count"];
+    [defaults synchronize];
+}
 @end

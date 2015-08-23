@@ -25,6 +25,15 @@
                             <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-eI-fDj" customClass="DrawingView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqy-be-cQu">
+                                <rect key="frame" x="254" y="622" width="105" height="30"/>
+                                <state key="normal" title="reset play_cont">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPlayCont:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Okh-Bc-OVR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -40,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444.5" y="302.5"/>
+            <point key="canvasLocation" x="370.5" y="347.5"/>
         </scene>
     </scenes>
 </document>

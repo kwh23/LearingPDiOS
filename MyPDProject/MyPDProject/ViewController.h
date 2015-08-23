@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) PDPatch *patch;
+- (IBAction)resetPlayCont:(UIButton *)sender;
 
 @end
 

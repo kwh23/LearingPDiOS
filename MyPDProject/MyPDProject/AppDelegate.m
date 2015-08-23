@@ -23,8 +23,26 @@
     if (pdInit != PdAudioOK) {
         NSLog(@"Pd failed to initailize");
     }
+    [PdBase setDelegate:self];
+    [PdBase subscribe:@"play_cont_write"];
     NSLog(@"Booyah!");
     return YES;
+}
+
+- (void)receivePrint:(NSString *)message {
+    NSLog(@"%@", message);
+}
+
+- (void)receiveFloat:(float)received fromSource:(NSString *)source {
+    if([source isEqualToString:@"play_cont_write"]) {
+        NSLog(@"Received float send from 'play_cont_write', with value (cast to int) %i: ", (int)received);
+        NSLog(@"Will store to NSUserDefaults as the Fibonnaci play count");
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        NSNumber* fibNum = [NSNumber numberWithFloat:received];
+        [defaults setObject:fibNum forKey:@"fib_play_count"];
+        [defaults synchronize];
+        NSLog(@"Saved data");
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

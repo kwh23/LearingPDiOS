@@ -18,52 +18,97 @@
     return self;
 }
 
-//- (id)initWithFrame:(CGRect)frame {
-//    self = [super initWithFrame:frame];
-//    NSLog(@"Init with frame");
-//    return self;
-//}
-
-//- (BOOL)isOpaque {
-//    return YES;
-//}
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ */
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    shouldClearBackground = YES;
+    //    if(shouldClearBackground) {
+    //        [[UIColor whiteColor] set];
+    //        UIRectFill(rect);
+    //        shouldClearBackground = NO;
+    //        NSLog(@"Clearing background");
+    //        return;
+    //    }
     
-    if(shouldClearBackground) {
-        [[UIColor whiteColor] set];
-        UIRectFill(rect);
-        shouldClearBackground = NO;
+    if(!storedImage) {
+        UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        // drawing code here (using context)
+        //        UIColor * whiteColor = [UIColor colorWithWhite:0.5f alpha:1.f];
+        UIColor *blackColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:1.f];
+        
+        CGContextSetFillColorWithColor(context, blackColor.CGColor);
+        CGContextFillRect(context, rect);
+        
+        storedImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    if(lastTouchPos.x == 0 && lastTouchPos.y == 0) {
+        [storedImage drawInRect:rect];
         return;
     }
-    
-//    if(lastTouchPos.x ) {
-    for(int i = 0; i < 1; ++i) {
-        int randOffset = arc4random_uniform(50);
-        int randWidth = arc4random_uniform(10);
-        int randHeight = arc4random_uniform(10);
+    //Start a new image
+    UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //Draw our existing image
+    [storedImage drawInRect:rect];
+    //Draw new stuff on top
+    for(int i = 0; i < 10; ++i) {
+        int randOffsetX = arc4random_uniform(50) - 25;
+        int randOffsetY = arc4random_uniform(50) - 25;
+        int randWidth = arc4random_uniform(10) - 5;
+        int randHeight = arc4random_uniform(10) - 5;
         int randAlpha = arc4random_uniform(255);
-//        NSLog(@"Random value: %i", randAlpha);
         float newAlpha = (float)randAlpha / 255.f;
-//        NSLog(@"Alpha val = %0.02f", newAlpha);
-        CGRect littleSquare = CGRectMake(lastTouchPos.x + randOffset, lastTouchPos.y + randOffset, 20.f + randWidth, 20.f + randHeight);
-        [[UIColor colorWithWhite:0.f alpha:newAlpha] set];
-        UIRectFrameUsingBlendMode(littleSquare, kCGBlendModeSourceAtop);
+        CGRect littleSquare = CGRectMake(lastTouchPos.x + randOffsetX, lastTouchPos.y + randOffsetY, 20.f + randWidth, 20.f + randHeight);
+        
+        UIColor *rectColor = [UIColor colorWithWhite:1.f alpha:newAlpha];
+        CGContextSetStrokeColorWithColor(context, rectColor.CGColor);
+        //Rotate and draw the rect
+        float radians = (float)((float)arc4random()/ARC4RANDOM_MAX) * M_2_PI - M_1_PI;
+        [self rotateAndDrawRetangle:littleSquare WithAngle:radians CGContext:context];
+        
+//        CGContextStrokeRect(context, littleSquare);
     }
-//    }
     
+    storedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
+    [storedImage drawInRect:rect];
+
 }
 
+- (void)rotateAndDrawRetangle:(CGRect)rect WithAngle:(float)radians CGContext:(CGContextRef)context {
+    CGContextSaveGState(context);
+    
+    CGFloat width = rect.size.width;
+    CGFloat height = rect.size.height;
+    CGFloat x = rect.origin.x;
+    CGFloat y = rect.origin.y;
+    
+    CGFloat halfWidth = width / 2.0;
+    CGFloat halfHeight = height / 2.0;
+    CGPoint center = CGPointMake(x + halfWidth, y + halfHeight);
+    
+    // Move to the center of the rectangle:
+    CGContextTranslateCTM(context, center.x, center.y);
+    // Rotate:
+    CGContextRotateCTM(context, radians);
+    // Draw the rectangle centered about the center:
+    CGRect rotatedRect = CGRectMake(-halfWidth, -halfHeight, width, height);
+    CGContextAddRect(context, rotatedRect);
+    CGContextStrokePath(context);
+    CGContextRestoreGState(context);
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     lastTouchPos = [[touches anyObject] locationInView:self];
-    NSLog(@"Touch received at point x/y: %0.02f/%0.02f", lastTouchPos.x, lastTouchPos.y);
+//    NSLog(@"Touch received at point x/y: %0.02f/%0.02f", lastTouchPos.x, lastTouchPos.y);
     [self setNeedsDisplay];
 }
 

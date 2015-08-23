@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#define ARC4RANDOM_MAX      0x100000000
+
 @interface DrawingView : UIView {
     CGPoint lastTouchPos;
     BOOL shouldClearBackground;
+    UIImage* storedImage;
 }
+
+//Simple helper function to store the rotation code
+- (void)rotateAndDrawRetangle:(CGRect)rect WithAngle:(float)radians CGContext:(CGContextRef)context;
 
 @end

@@ -26,6 +26,7 @@
     [PdBase setDelegate:self];
     [PdBase subscribe:@"play_cont_write"];
     [PdBase subscribe:@"playback1"];
+    rCount = 0;
     NSLog(@"Booyah!");
     return YES;
 }
@@ -45,9 +46,13 @@
 //        NSLog(@"Saved data");
     }
     else if([source isEqualToString:@"playback1"]) {
-        float percentagePlayback = received;
-        NSNotification* n = [NSNotification notificationWithName:@"PlaybackPercentage" object:self userInfo:[NSDictionary dictionaryWithObject:@(percentagePlayback) forKey:@"PlaybackPercentage"]];
-        [[NSNotificationCenter defaultCenter] postNotification:n];
+        rCount = rCount % 50;
+        if(rCount == 0) {
+            float percentagePlayback = received;
+            NSNotification* n = [NSNotification notificationWithName:@"PlaybackPercentage" object:self userInfo:[NSDictionary dictionaryWithObject:@(percentagePlayback) forKey:@"PlaybackPercentage"]];
+            [[NSNotificationCenter defaultCenter] postNotification:n];
+        }
+        rCount++;
     }
 }
 

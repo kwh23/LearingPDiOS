@@ -15,6 +15,10 @@
     BOOL shouldClearBackground;
     UIImage* storedImage;
     float playbackPercentage;
+    int rCount;
+    int hozDir;
+    int vertDir;
+    
 }
 
 //Simple helper function to store the rotation code

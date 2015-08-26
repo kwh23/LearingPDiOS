@@ -10,7 +10,9 @@
 #import "PdAudioController.h"
 #import "PdBase.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, PdReceiverDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PdReceiverDelegate> {
+    int rCount;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) PdAudioController *pd;

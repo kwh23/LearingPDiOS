@@ -14,9 +14,12 @@
     CGPoint lastTouchPos;
     BOOL shouldClearBackground;
     UIImage* storedImage;
+    float playbackPercentage;
 }
 
 //Simple helper function to store the rotation code
 - (void)rotateAndDrawRetangle:(CGRect)rect WithAngle:(float)radians CGContext:(CGContextRef)context;
+
+- (void)handlePlaybackPercentage:(NSNotification*)n;
 
 @end

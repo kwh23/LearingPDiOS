@@ -15,9 +15,20 @@
     self = [super initWithCoder:aDecoder];
     NSLog(@"init with coder" );
     shouldClearBackground = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePlaybackPercentage:) name:@"PlaybackPercentage" object:nil];
     return self;
 }
 
+- (void)handlePlaybackPercentage:(NSNotification *)n {
+    NSDictionary* dict = [n userInfo];
+    playbackPercentage = [[dict objectForKey:@"PlaybackPercentage"] floatValue];
+    NSLog(@"Playback percentage called with val: %0.02f", playbackPercentage);
+    [self setNeedsDisplay];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 /*
  // Only override drawRect: if you perform custom drawing.

@@ -11,9 +11,12 @@
 #define ARC4RANDOM_MAX      0x100000000
 
 @interface DrawingView : UIView {
+    BOOL hasFinished;
     CGPoint lastTouchPos;
     BOOL shouldClearBackground;
     UIImage* storedImage;
+    UIImage* endImageFromPreviousRendition;
+    BOOL shouldDrawOverSavedImage;
     float playbackPercentage;
     int rCount;
     int hozDir;

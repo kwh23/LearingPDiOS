@@ -28,7 +28,23 @@
     playbackPercentage = [[dict objectForKey:@"PlaybackPercentage"] floatValue];
     rCount++;
 //    NSLog(@"Playback percentage called with val: %0.02f, recieved %i counts", playbackPercentage, rCount);
-    [self setNeedsDisplay];
+    if(playbackPercentage >= 1.f && !hasFinished) {
+        hasFinished = YES;
+        //Save the image as our new background image
+        endImageFromPreviousRendition = [UIImage imageWithCGImage:[storedImage CGImage]];
+        shouldDrawOverSavedImage = YES;
+        UIGraphicsBeginImageContextWithOptions([storedImage size], NO, 1.f);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+//        UIColor *blackColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:1.f];
+        UIColor* clearColour = [UIColor colorWithWhite:1.f alpha:1.f];
+        CGContextSetFillColorWithColor(context, clearColour.CGColor);
+        CGContextFillRect(context, CGRectMake(0, 0, [storedImage size].width, [storedImage size].height));
+        storedImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    else {
+        [self setNeedsDisplay];
+    }
 }
 
 - (void)dealloc {
@@ -41,15 +57,13 @@
  */
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    shouldClearBackground = YES;
+//    shouldClearBackground = YES;
     float width = rect.size.width;
     float height = rect.size.height;
     if(!storedImage) {
         UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
         
         CGContextRef context = UIGraphicsGetCurrentContext();
-        // drawing code here (using context)
-        //        UIColor * whiteColor = [UIColor colorWithWhite:0.5f alpha:1.f];
         UIColor *blackColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:1.f];
         
         CGContextSetFillColorWithColor(context, blackColor.CGColor);
@@ -62,9 +76,16 @@
         [storedImage drawInRect:rect];
 //        return;
     }
+    if (shouldDrawOverSavedImage) {
+        [endImageFromPreviousRendition drawInRect:rect];
+
+    }
+
+
     //Start a new image
     UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
     CGContextRef context = UIGraphicsGetCurrentContext();
+
     //Draw our existing image
     [storedImage drawInRect:rect];
     //Draw new stuff on top
@@ -87,7 +108,7 @@
 //        }
         CGRect littleSquare = CGRectMake(newX, newY, 20.f + randWidth, 20.f + randHeight);
         
-        UIColor *rectColor = [UIColor colorWithWhite:1.f alpha:newAlpha];
+        UIColor *rectColor = [UIColor colorWithWhite:1.f alpha:newAlpha * playbackPercentage];
         CGContextSetStrokeColorWithColor(context, rectColor.CGColor);
         //Rotate and draw the rect
         float radians = (float)((float)arc4random()/ARC4RANDOM_MAX) * M_2_PI - M_1_PI;
@@ -98,8 +119,10 @@
     
     storedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    [storedImage drawInRect:rect];
+    [[UIColor blackColor] setFill];
+    UIRectFill(rect);
+    float imageAlpha = powf(playbackPercentage, 1.5f);
+    [storedImage drawInRect:rect blendMode:kCGBlendModePlusLighter alpha:imageAlpha];
     
     //Update the next touchPosition to draw
     float curXPerc = lastTouchPos.x / width;

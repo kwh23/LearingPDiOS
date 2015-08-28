@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "898020F51B66F53B0089A703"
-               BuildableName = "MyPDProject.app"
-               BlueprintName = "MyPDProject"
-               ReferencedContainer = "container:MyPDProject.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8980210E1B66F53C0089A703"
-               BuildableName = "MyPDProjectTests.xctest"
-               BlueprintName = "MyPDProjectTests"
-               ReferencedContainer = "container:MyPDProject.xcodeproj">
+               BuildableName = "Memories.app"
+               BlueprintName = "Memories"
+               ReferencedContainer = "container:Memories.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8980210E1B66F53C0089A703"
-               BuildableName = "MyPDProjectTests.xctest"
-               BlueprintName = "MyPDProjectTests"
-               ReferencedContainer = "container:MyPDProject.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898020F51B66F53B0089A703"
-            BuildableName = "MyPDProject.app"
-            BlueprintName = "MyPDProject"
-            ReferencedContainer = "container:MyPDProject.xcodeproj">
+            BuildableName = "Memories.app"
+            BlueprintName = "Memories"
+            ReferencedContainer = "container:Memories.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898020F51B66F53B0089A703"
-            BuildableName = "MyPDProject.app"
-            BlueprintName = "MyPDProject"
-            ReferencedContainer = "container:MyPDProject.xcodeproj">
+            BuildableName = "Memories.app"
+            BlueprintName = "Memories"
+            ReferencedContainer = "container:Memories.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "898020F51B66F53B0089A703"
-            BuildableName = "MyPDProject.app"
-            BlueprintName = "MyPDProject"
-            ReferencedContainer = "container:MyPDProject.xcodeproj">
+            BuildableName = "Memories.app"
+            BlueprintName = "Memories"
+            ReferencedContainer = "container:Memories.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

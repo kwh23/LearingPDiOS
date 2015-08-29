@@ -12,6 +12,7 @@
 
 @interface DrawingView : UIView {
     BOOL hasFinished;
+    BOOL hasEverFinished;
     CGPoint lastTouchPos;
     BOOL shouldClearBackground;
     UIImage* storedImage;

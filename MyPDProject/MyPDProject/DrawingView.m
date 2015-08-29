@@ -20,6 +20,7 @@
     //Initialise the directions to go to the right, and down (touch pos starts in top left corner)
     hozDir = 1;
     vertDir = 1;
+    hasEverFinished = NO;
     return self;
 }
 
@@ -30,19 +31,30 @@
 //    NSLog(@"Playback percentage called with val: %0.02f, recieved %i counts", playbackPercentage, rCount);
     if(playbackPercentage >= 1.f && !hasFinished) {
         hasFinished = YES;
+        hasEverFinished = YES;
+        return;
         //Save the image as our new background image
         endImageFromPreviousRendition = [UIImage imageWithCGImage:[storedImage CGImage]];
         shouldDrawOverSavedImage = YES;
-        UIGraphicsBeginImageContextWithOptions([storedImage size], NO, 1.f);
+        UIGraphicsBeginImageContextWithOptions([storedImage size], YES, 1.f);
         CGContextRef context = UIGraphicsGetCurrentContext();
+        CGRect rect = CGRectMake(0, 0, [storedImage size].width, [storedImage size].height);
 //        UIColor *blackColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:1.f];
-        UIColor* clearColour = [UIColor colorWithWhite:1.f alpha:1.f];
-        CGContextSetFillColorWithColor(context, clearColour.CGColor);
-        CGContextFillRect(context, CGRectMake(0, 0, [storedImage size].width, [storedImage size].height));
-        storedImage = UIGraphicsGetImageFromCurrentImageContext();
+//        UIColor* clearColour = [UIColor colorWithWhite:1.f alpha:1.f];
+//        CGContextSetFillColorWithColor(context, clearColour.CGColor);
+//        CGContextFillRect(context, CGRectMake(0, 0, [storedImage size].width, [storedImage size].height));
+        if(endImageFromPreviousRendition) { //If we have already created an end image, draw it as the background to this new one first...
+//            [endImageFromPreviousRendition drawInRect:rect];
+            CGContextDrawImage(context, rect, endImageFromPreviousRendition.CGImage);
+            NSLog(@"Drawing old eld image");
+        }
+        CGContextDrawImage(context, rect, storedImage.CGImage);
+//        [storedImage drawInRect:rect blendMode:kCGBlendModePlusLighter alpha:1.f];
+        endImageFromPreviousRendition = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
     else {
+        hasFinished = NO;
         [self setNeedsDisplay];
     }
 }
@@ -76,18 +88,18 @@
         [storedImage drawInRect:rect];
 //        return;
     }
-    if (shouldDrawOverSavedImage) {
-        [endImageFromPreviousRendition drawInRect:rect];
-
-    }
-
 
     //Start a new image
     UIGraphicsBeginImageContext(CGSizeMake(rect.size.width, rect.size.height));
     CGContextRef context = UIGraphicsGetCurrentContext();
+    
+//    if(shouldDrawOverSavedImage) {
+//        [endImageFromPreviousRendition drawInRect:rect];
+//    }
 
     //Draw our existing image
     [storedImage drawInRect:rect];
+//    CGContextDrawImage(context, rect, storedImage.CGImage);
     //Draw new stuff on top
     for(int i = 0; i < 5; ++i) {
         int randOffsetX = arc4random_uniform(50) - 25;
@@ -121,7 +133,19 @@
     UIGraphicsEndImageContext();
     [[UIColor blackColor] setFill];
     UIRectFill(rect);
+
+//    if(shouldDrawOverSavedImage) {
+//        [endImageFromPreviousRendition drawInRect:rect];
+//    }
+//    else {
+        [[UIColor blackColor] setFill];
+        UIRectFill(rect);
+//    }
     float imageAlpha = powf(playbackPercentage, 1.5f);
+    if(hasEverFinished) {
+        imageAlpha = 1.f - (((float)arc4random_uniform(255)/255.f) * 0.1);  //A bit of random fluctuation
+        imageAlpha = 1.f;
+    }
     [storedImage drawInRect:rect blendMode:kCGBlendModePlusLighter alpha:imageAlpha];
     
     //Update the next touchPosition to draw

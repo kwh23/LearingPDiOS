@@ -24,6 +24,17 @@
                             </switch>
                             <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-eI-fDj" customClass="DrawingView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-bY-aMP">
+                                        <rect key="frame" x="120" y="237" width="134" height="134"/>
+                                        <state key="normal" title="Button" image="circle_Cropped_135px.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopStartPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JJm-Qx-U9V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqy-be-cQu">
                                 <rect key="frame" x="254" y="622" width="105" height="30"/>
@@ -45,6 +56,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="onOff" destination="7IN-sF-RfN" id="9s5-jc-WaF"/>
+                        <outlet property="stopStartButton" destination="cwl-bY-aMP" id="nQ2-D8-p3a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -52,4 +64,7 @@
             <point key="canvasLocation" x="370.5" y="347.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle_Cropped_135px.png" width="135" height="134"/>
+    </resources>
 </document>

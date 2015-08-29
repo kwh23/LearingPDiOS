@@ -15,6 +15,10 @@
 
 @implementation ViewController
 
+- (IBAction)stopStartPress:(UIButton *)sender {
+    [self togglePlayback];
+}
+
 - (IBAction)onSwitchCange:(id)sender {
     BOOL state = [sender isOn];
     if(state) {
@@ -88,7 +92,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    whichPatchIsPlaying = -1;
+    self.stopStartButton.imageView.clipsToBounds = NO;
+    self.stopStartButton.imageView.contentMode = UIViewContentModeCenter;
+    
+    whichPatchIsPlaying = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePlaybackPercentage:) name:@"PlaybackPercentage" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(file2PlayEnd:) name:@"File2PlayEnd" object:nil];
     // Do any additional setup after loading the view, typically from a nib.
@@ -105,6 +112,8 @@
     NSDictionary* dict = [n userInfo];
     float playbackPercentage = [[dict objectForKey:@"PlaybackPercentage"] floatValue];
     //    NSLog(@"Playback percentage called with val: %0.02f, recieved %i counts", playbackPercentage, rCount);
+    float buttonRotation = (playbackPercentage * M_2_PI * 64.f);
+    self.stopStartButton.imageView.transform = CGAffineTransformMakeRotation(buttonRotation);
     if(playbackPercentage >= 1.f && !isFinished) {
         isFinished = YES;
         isPlaying = NO;

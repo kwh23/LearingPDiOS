@@ -18,6 +18,11 @@
 
 @property (strong, nonatomic) PDPatch *patch1;
 @property (strong, nonatomic) PDPatch *patch2;
+
+@property (weak, nonatomic) IBOutlet UIButton *stopStartButton;
+- (IBAction)stopStartPress:(UIButton *)sender;
+
+
 - (IBAction)resetPlayCont:(UIButton *)sender;
 
 - (void)handlePlaybackPercentage:(NSNotification*)n;

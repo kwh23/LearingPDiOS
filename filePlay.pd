@@ -1,5 +1,5 @@
-#N canvas 135 22 965 782 10;
-#X obj 13 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#N canvas 523 146 965 782 10;
+#X obj 13 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 13 68 s onOff;
 #X obj 78 548 dac~;
@@ -484,7 +484,7 @@ floor.;
 #X obj 93 306 pow 2;
 #X obj 199 358 spigot;
 #X obj 255 336 r onOff;
-#X obj 260 366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 260 366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 125 240 5 0 0 0 - - -;
 #X obj 170 238 print playcount;
@@ -585,9 +585,9 @@ floor.;
 #X connect 56 2 47 0;
 #X connect 56 3 55 0;
 #X restore 400 78 pd sequence;
-#X obj 400 56 r onOff;
+#X obj 402 44 r onOff;
 #X obj 460 236 r fibi;
-#N canvas 742 174 877 597 audio 1;
+#N canvas 742 174 877 597 audio 0;
 #X obj 1 23 inlet;
 #X obj 49 538 outlet~;
 #X obj 170 539 outlet~;
@@ -620,12 +620,12 @@ floor.;
 #X obj 429 121 del 3000;
 #X obj 529 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 283 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 283 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 283 359 snapshot~;
 #X floatatom 283 440 10 0 0 0 - - -;
 #X obj 373 483 hsl 195 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
--1 -1 3220 1;
+-1 -1 19400 1;
 #X text 369 500 Playback position;
 #X obj 283 481 s playback1;
 #X text 550 25 reset buffer;
@@ -1040,10 +1040,10 @@ fileL fileR;
 #X floatatom 739 679 5 0 0 0 - - -;
 #X obj 739 700 t b f;
 #X obj 691 516 vsl 15 128 100 30000 0 0 empty empty empty 0 -8 0 8
--262144 -1 -1 0 1;
+-262144 -1 -1 8453 1;
 #X obj 690 674 t b f;
 #X obj 739 599 vsl 15 73 -36 36 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 3600 1;
 #X text 756 663 -36;
 #X text 708 633 100;
 #X obj 681 729 s gsize;
@@ -1100,6 +1100,7 @@ fileL fileR;
 #X obj 669 17 loadbang;
 #X obj 643 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 325 103 print test;
 #X connect 0 0 1 0;
 #X connect 3 0 35 0;
 #X connect 4 0 7 0;
@@ -1128,6 +1129,7 @@ fileL fileR;
 #X connect 31 0 25 0;
 #X connect 32 0 21 0;
 #X connect 33 0 32 0;
+#X connect 33 0 101 0;
 #X connect 34 0 16 1;
 #X connect 35 0 14 0;
 #X connect 35 0 36 0;

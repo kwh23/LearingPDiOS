@@ -9,10 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "PDPatch.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    BOOL isPlaying;
+    int whichPatchIsPlaying;
+    BOOL isFinished;
+    int nextPatchToPlay;
+}
 
-@property (strong, nonatomic) PDPatch *patch;
+@property (strong, nonatomic) PDPatch *patch1;
+@property (strong, nonatomic) PDPatch *patch2;
 - (IBAction)resetPlayCont:(UIButton *)sender;
+
+- (void)handlePlaybackPercentage:(NSNotification*)n;
+- (void)file2PlayEnd:(NSNotification*)n;
+
+- (void)togglePlayback;
+- (void)startPlaybackAfterPreviousFinish;
 
 @end
 

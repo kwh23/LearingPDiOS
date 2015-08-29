@@ -23,6 +23,8 @@
 		89A2F7401B71B86700A651C4 /* Mist_form_wip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */; };
 		89CD1EFE1B85C4780087F6BE /* fibo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 89CD1EFD1B85C4780087F6BE /* fibo.txt */; };
 		89CD1F001B85C4800087F6BE /* play.txt in Resources */ = {isa = PBXBuildFile; fileRef = 89CD1EFF1B85C4800087F6BE /* play.txt */; };
+		D02C7D7E1B8FEC9F0021AEF1 /* filePlay2.pd in Resources */ = {isa = PBXBuildFile; fileRef = D02C7D7D1B8FEC9F0021AEF1 /* filePlay2.pd */; };
+		D02C7D831B8FEF250021AEF1 /* wisper.wav in Resources */ = {isa = PBXBuildFile; fileRef = D02C7D821B8FEF250021AEF1 /* wisper.wav */; };
 		D04B22A61B8FE67700CC9173 /* memories ep splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D04B22A51B8FE67700CC9173 /* memories ep splash.png */; };
 		D0A2D5E41B7B1D5A00238AF1 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */; };
 		D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */ = {isa = PBXBuildFile; fileRef = D0C09AD61B6A40E600E5B054 /* filePlay.pd */; };
@@ -84,6 +86,8 @@
 		89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mist_form_wip.wav; sourceTree = "<group>"; };
 		89CD1EFD1B85C4780087F6BE /* fibo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fibo.txt; sourceTree = "<group>"; };
 		89CD1EFF1B85C4800087F6BE /* play.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = play.txt; sourceTree = "<group>"; };
+		D02C7D7D1B8FEC9F0021AEF1 /* filePlay2.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = filePlay2.pd; path = ../../filePlay2.pd; sourceTree = "<group>"; };
+		D02C7D821B8FEF250021AEF1 /* wisper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wisper.wav; sourceTree = "<group>"; };
 		D04B22A51B8FE67700CC9173 /* memories ep splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memories ep splash.png"; sourceTree = "<group>"; };
 		D0A2D5E21B7B1D5A00238AF1 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawingView.h; path = MyPDProject/DrawingView.h; sourceTree = "<group>"; };
 		D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawingView.m; path = MyPDProject/DrawingView.m; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			children = (
 				D0A2D5E21B7B1D5A00238AF1 /* DrawingView.h */,
 				D0A2D5E31B7B1D5A00238AF1 /* DrawingView.m */,
+				D02C7D821B8FEF250021AEF1 /* wisper.wav */,
 				89A2F73F1B71B86700A651C4 /* Mist_form_wip.wav */,
 				D0C09ADB1B6A41B200E5B054 /* testAudio_Stereo.wav */,
 				8991389D1B8462AA0028A37C /* testAudio_Stereo.aiff */,
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D0C09AD61B6A40E600E5B054 /* filePlay.pd */,
+				D02C7D7D1B8FEC9F0021AEF1 /* filePlay2.pd */,
 				898020FD1B66F53C0089A703 /* AppDelegate.h */,
 				898020FE1B66F53C0089A703 /* AppDelegate.m */,
 				898021311B66FA890089A703 /* PDPatch.h */,
@@ -301,10 +307,12 @@
 			files = (
 				898021051B66F53C0089A703 /* Main.storyboard in Resources */,
 				8980210A1B66F53C0089A703 /* LaunchScreen.xib in Resources */,
+				D02C7D831B8FEF250021AEF1 /* wisper.wav in Resources */,
 				D0C09AD71B6A40E600E5B054 /* filePlay.pd in Resources */,
 				D0C09ADC1B6A41B200E5B054 /* testAudio_Stereo.wav in Resources */,
 				89CD1F001B85C4800087F6BE /* play.txt in Resources */,
 				8991389E1B8462AA0028A37C /* testAudio_Stereo.aiff in Resources */,
+				D02C7D7E1B8FEC9F0021AEF1 /* filePlay2.pd in Resources */,
 				89A2F7401B71B86700A651C4 /* Mist_form_wip.wav in Resources */,
 				898021301B66F7F60089A703 /* main.pd in Resources */,
 				89CD1EFE1B85C4780087F6BE /* fibo.txt in Resources */,

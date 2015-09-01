@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#N canvas 385 44 965 782 10;
+=======
 #N canvas 523 146 965 782 10;
+>>>>>>> origin/using-full-file-length-track1
 #X obj 13 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 13 68 s onOff;
@@ -415,7 +419,6 @@ floor.;
 #X msg 211 563 start;
 #X msg 253 563 stop;
 #X obj 211 543 t b b;
-#X msg 263 592 open Mist_form_wip2.wav;
 #N canvas 245 383 834 499 sequence 0;
 #X obj 48 110 sel 1;
 #X floatatom 93 282 10 0 0 0 - - -;
@@ -602,12 +605,12 @@ floor.;
 #X obj 504 234 / 44100;
 #N canvas 552 305 925 542 arrays 0;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array fileL 282660 float 0;
-#X coords 0 1 282659 -1 200 140 1 0 0;
+#X array fileL 5.70822e+06 float 0;
+#X coords 0 1 5.70822e+06 -1 200 140 1 0 0;
 #X restore 97 0 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array fileR 282660 float 0;
-#X coords 0 1 282659 -1 200 140 1 0 0;
+#X array fileR 5.70822e+06 float 0;
+#X coords 0 1 5.70822e+06 -1 200 140 1 0 0;
 #X restore 108 240 graph;
 #X restore 606 77 pd arrays;
 #X obj 555 234 s fileLenSamps;
@@ -701,7 +704,7 @@ fileL fileR;
 #X connect 43 0 36 0;
 #X connect 45 0 22 0;
 #X restore 79 134 pd audio;
-#N canvas 221 315 481 385 Skip 1;
+#N canvas 221 315 481 385 Skip 0;
 #X obj 9 16 inlet~;
 #X obj 22 355 s playback;
 #X obj 9 43 env~;
@@ -737,10 +740,10 @@ fileL fileR;
 #N canvas 0 22 450 300 skipar 0;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array skiparray 100 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
-0;
+#A 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 0 1 1 0 1 1 1 1 0 0 0 0 0 0 1 0 0
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1
+0 0 1 1 0 1 1 1 0 1 1 1 0 1 0 0 1 1 0 1 1 1 1 0 0 0 1 1 0 1 0 1 1 0
+1;
 #X coords 0 1 99 0 200 140 1 0 0;
 #X restore 123 60 graph;
 #X restore 324 18 pd skipar;
@@ -754,7 +757,7 @@ fileL fileR;
 #X obj 318 46 r fibi;
 #X obj 318 68 >= 1;
 #X obj 249 93 spigot;
-#X obj 298 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 298 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 223 323 s skip;
 #X connect 0 0 2 0;
@@ -819,7 +822,7 @@ fileL fileR;
 #X connect 9 0 5 0;
 #X restore 312 291 pd noise;
 #X obj 211 496 spigot;
-#X obj 261 496 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 261 496 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 279 496 keep off till new parts implimented;
 #N canvas 581 22 802 888 grains 0;
@@ -1040,10 +1043,10 @@ fileL fileR;
 #X floatatom 739 679 5 0 0 0 - - -;
 #X obj 739 700 t b f;
 #X obj 691 516 vsl 15 128 100 30000 0 0 empty empty empty 0 -8 0 8
--262144 -1 -1 0 1;
+-262144 -1 -1 8457 1;
 #X obj 690 674 t b f;
 #X obj 739 599 vsl 15 73 -36 36 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 2960 1;
 #X text 756 663 -36;
 #X text 708 633 100;
 #X obj 681 729 s gsize;
@@ -1083,7 +1086,7 @@ fileL fileR;
 #X obj 739 552 +;
 #X obj 789 540 spigot;
 #X obj 893 540 r fibi;
-#X obj 839 541 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 839 541 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 865 540 > 0;
 #X obj 59 20 r play;
@@ -1100,9 +1103,13 @@ fileL fileR;
 #X obj 669 17 loadbang;
 #X obj 643 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+<<<<<<< HEAD
+#X msg 263 592 open Mist_form_wip3.wav;
+=======
 #X obj 325 103 print test;
+>>>>>>> origin/using-full-file-length-track1
 #X connect 0 0 1 0;
-#X connect 3 0 35 0;
+#X connect 3 0 34 0;
 #X connect 4 0 7 0;
 #X connect 5 0 25 0;
 #X connect 5 0 2 0;
@@ -1110,21 +1117,81 @@ fileL fileR;
 #X connect 12 0 25 1;
 #X connect 12 0 2 1;
 #X connect 13 0 9 0;
-#X connect 13 0 32 1;
-#X connect 13 0 62 0;
+#X connect 13 0 31 1;
+#X connect 13 0 61 0;
 #X connect 14 0 15 0;
-#X connect 15 0 81 0;
+#X connect 15 0 80 0;
 #X connect 16 0 4 0;
 #X connect 19 0 18 0;
 #X connect 20 0 18 0;
 #X connect 22 0 18 0;
 #X connect 23 0 24 0;
-#X connect 26 0 38 0;
+#X connect 26 0 37 0;
 #X connect 27 0 30 0;
 #X connect 27 1 29 0;
 #X connect 28 0 25 0;
 #X connect 29 0 25 0;
 #X connect 30 0 28 0;
+<<<<<<< HEAD
+#X connect 30 1 100 0;
+#X connect 31 0 21 0;
+#X connect 32 0 31 0;
+#X connect 33 0 16 1;
+#X connect 34 0 14 0;
+#X connect 34 0 35 0;
+#X connect 34 0 62 0;
+#X connect 34 1 63 0;
+#X connect 36 0 63 1;
+#X connect 36 0 62 1;
+#X connect 37 0 27 0;
+#X connect 38 0 37 1;
+#X connect 40 0 12 0;
+#X connect 41 0 5 0;
+#X connect 42 0 43 0;
+#X connect 43 0 49 0;
+#X connect 43 1 50 0;
+#X connect 44 0 67 0;
+#X connect 45 0 42 0;
+#X connect 45 1 49 0;
+#X connect 46 0 42 0;
+#X connect 51 0 41 1;
+#X connect 52 0 41 2;
+#X connect 53 0 40 1;
+#X connect 54 0 40 2;
+#X connect 55 0 46 0;
+#X connect 56 0 59 0;
+#X connect 57 0 66 0;
+#X connect 59 0 82 0;
+#X connect 61 0 60 0;
+#X connect 61 0 92 0;
+#X connect 62 0 41 0;
+#X connect 63 0 40 0;
+#X connect 64 0 44 0;
+#X connect 64 0 58 0;
+#X connect 65 0 66 1;
+#X connect 66 0 64 0;
+#X connect 67 0 45 0;
+#X connect 69 0 68 0;
+#X connect 69 0 73 0;
+#X connect 70 0 68 0;
+#X connect 71 0 70 0;
+#X connect 72 0 78 0;
+#X connect 73 0 75 1;
+#X connect 74 0 71 0;
+#X connect 75 0 74 0;
+#X connect 76 0 69 0;
+#X connect 77 0 79 0;
+#X connect 78 0 71 0;
+#X connect 79 0 78 1;
+#X connect 80 0 16 0;
+#X connect 81 0 83 0;
+#X connect 82 0 55 0;
+#X connect 83 0 82 1;
+#X connect 84 0 86 0;
+#X connect 85 0 83 1;
+#X connect 86 0 85 0;
+#X connect 87 0 89 0;
+=======
 #X connect 30 1 31 0;
 #X connect 31 0 25 0;
 #X connect 32 0 21 0;
@@ -1184,11 +1251,12 @@ fileL fileR;
 #X connect 85 0 87 0;
 #X connect 86 0 84 1;
 #X connect 87 0 86 0;
+>>>>>>> origin/using-full-file-length-track1
 #X connect 88 0 90 0;
-#X connect 89 0 91 0;
+#X connect 89 0 0 0;
 #X connect 90 0 0 0;
-#X connect 91 0 0 0;
-#X connect 94 0 95 0;
-#X connect 95 0 97 0;
-#X connect 95 1 96 0;
-#X connect 100 0 98 0;
+#X connect 93 0 94 0;
+#X connect 94 0 96 0;
+#X connect 94 1 95 0;
+#X connect 99 0 97 0;
+#X connect 100 0 25 0;

@@ -24,7 +24,10 @@
         NSLog(@"Pd failed to initailize");
     }
     [PdBase setDelegate:self];
-    [PdBase subscribe:@"play_cont_write"];
+    [PdBase subscribe:@"play_cont_write_file2"];
+    [PdBase subscribe:@"playback1"];
+    [PdBase subscribe:@"file2PlayEnd"];
+    rCount = 0;
     NSLog(@"Booyah!");
     return YES;
 }
@@ -34,14 +37,30 @@
 }
 
 - (void)receiveFloat:(float)received fromSource:(NSString *)source {
-    if([source isEqualToString:@"play_cont_write"]) {
-        NSLog(@"Received float send from 'play_cont_write', with value (cast to int) %i: ", (int)received);
-        NSLog(@"Will store to NSUserDefaults as the Fibonnaci play count");
+    if([source isEqualToString:@"play_cont_write_file2"]) {
+//        NSLog(@"Received float send from 'play_cont_write', with value (cast to int) %i: ", (int)received);
+//        NSLog(@"Will store to NSUserDefaults as the Fibonnaci play count");
         NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
         NSNumber* fibNum = [NSNumber numberWithFloat:received];
         [defaults setObject:fibNum forKey:@"fib_play_count"];
         [defaults synchronize];
-        NSLog(@"Saved data");
+//        NSLog(@"Saved data");
+    }
+    else if([source isEqualToString:@"playback1"]) {
+        rCount = rCount % 50;
+        if(rCount == 0) {
+            float percentagePlayback = received;
+            NSNotification* n = [NSNotification notificationWithName:@"PlaybackPercentage" object:self userInfo:[NSDictionary dictionaryWithObject:@(percentagePlayback) forKey:@"PlaybackPercentage"]];
+            [[NSNotificationCenter defaultCenter] postNotification:n];
+        }
+        rCount++;
+    }
+}
+
+- (void)receiveBangFromSource:(NSString *)source {
+    if([source isEqualToString:@"file2PlayEnd"]) {
+        NSNotification* n = [NSNotification notificationWithName:@"File2PlayEnd" object:self userInfo:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:n];
     }
 }
 

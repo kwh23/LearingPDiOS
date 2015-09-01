@@ -11,9 +11,13 @@
 #import  "PdDispatcher.h"
 
 
-@interface PDPatch : NSObject
+@interface PDPatch : NSObject {
+    void *patch;
+}
 
 -(void)onOff:(BOOL)yesNo;
 -(instancetype)initWithFile:(NSString *)pdFile;
+
+- (void*)getPatch;
 
 @end

@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 #N canvas 363 22 965 782 10;
+=======
+#N canvas 530 42 965 782 10;
+>>>>>>> origin/using-full-file-length-track1
 #X obj 13 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 13 68 s onOff;
 #X obj 78 548 dac~;
 #X obj 79 112 r onOff;
-#X floatatom 445 289 10 0 1000 0 - - -, f 10;
+#X floatatom 445 289 10 0 1000 0 - - -;
 #N canvas 98 22 648 669 fft-analysis 0;
 #X obj 35 589 *~;
 #X obj 143 305 *~;
@@ -341,11 +345,12 @@ with each of the accumulating ones.;
 #X obj 505 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 405 177 env~;
-#X floatatom 405 199 5 0 0 0 - - -, f 5;
+#X floatatom 405 199 5 0 0 0 - - -;
 #X obj 445 261 *;
 #N canvas 1150 142 592 442 mask-table 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array mask 512 float 1;
+<<<<<<< HEAD
 #A 0 0 0 0 0 0 9.69723 58.0239 115.609 163.344 203.885 246.465 244.396
 256.264 269.453 310.133 358.603 356.399 335.714 344.981 358.792 363.896
 384.582 364.796 326.159 286.067 265.696 255.791 220.874 208.98 233.529
@@ -396,6 +401,66 @@ with each of the accumulating ones.;
 18.0985 21.5414 17.5389 37.2576 30.2267 15.401 19.345 6.93141 4.24029
 0 10.9537 31.0676 18.6221 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 43.9698 54.5998 89.4009 75.9802 63.6751 17.3366 0 0 0 0;
+=======
+#A 0 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402 7.87402
+;
+>>>>>>> origin/using-full-file-length-track1
 #X coords 0 500 511 0 400 300 1 0 0;
 #X restore 100 71 graph;
 #X text 22 -1 This table (1002-mask) is the average power measured
@@ -419,7 +484,7 @@ floor.;
 #X obj 211 543 t b b;
 #N canvas 245 383 834 499 sequence 0;
 #X obj 48 110 sel 1;
-#X floatatom 93 282 10 0 0 0 - - -, f 10;
+#X floatatom 93 282 10 0 0 0 - - -;
 #X obj 48 48 inlet;
 #X obj 93 332 outlet;
 #X obj 140 47 inlet;
@@ -434,7 +499,7 @@ floor.;
 #X obj 310 271 r playback1;
 #X obj 310 293 * 100;
 #X obj 310 315 int;
-#X floatatom 310 337 5 0 0 0 - - -, f 5;
+#X floatatom 310 337 5 0 0 0 - - -;
 #N canvas 0 22 450 300 westcoast 0;
 #X obj 39 19 noise~;
 #X obj 39 72 samphold~;
@@ -454,7 +519,7 @@ floor.;
 #X obj 170 218 - 1;
 #X obj 188 169 r my_loadbang;
 #X obj 143 240 pow 1;
-#X floatatom 143 262 5 0 0 0 - - -, f 5;
+#X floatatom 143 262 5 0 0 0 - - -;
 #X msg 188 191 4;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
@@ -479,15 +544,15 @@ floor.;
 #X obj 199 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 199 336 random 2;
-#X floatatom 169 390 5 0 0 0 - - -, f 5;
-#X floatatom 304 80 5 0 0 0 - - -, f 5;
+#X floatatom 169 390 5 0 0 0 - - -;
+#X floatatom 304 80 5 0 0 0 - - -;
 #X obj 393 64 r my_loadbang;
 #X obj 93 306 pow 2;
 #X obj 199 358 spigot;
 #X obj 255 336 r onOff;
 #X obj 260 366 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 125 240 5 0 0 0 - - -, f 5;
+#X floatatom 125 240 5 0 0 0 - - -;
 #X obj 170 238 print playcount;
 #X obj 98 260 tabread fibsequence;
 #N canvas 1046 398 676 473 fibstore 0;
@@ -526,7 +591,6 @@ floor.;
 #X obj 680 187 tabwrite playcont;
 #X text 241 130 changed to zero - array is only that size;
 #X obj 611 223 print playcontFromXcode;
-#X obj 467 254 s play_cont_write;
 #X text 485 234 send to xcode;
 #X msg 486 216 0;
 #X msg 429 133 \; playcont read play.txt;
@@ -534,6 +598,7 @@ floor.;
 #X msg 759 142 0;
 #X obj 685 103 t b f f b;
 #X obj 592 132 s my_loadbang;
+#X obj 467 254 s play_cont_write_file2;
 #X connect 0 0 31 0;
 #X connect 1 0 22 0;
 #X connect 1 0 16 0;
@@ -568,28 +633,28 @@ floor.;
 #X connect 32 0 31 1;
 #X connect 33 0 31 1;
 #X connect 35 0 31 1;
-#X connect 36 0 54 0;
+#X connect 36 0 53 0;
 #X connect 38 0 37 0;
 #X connect 38 0 39 0;
 #X connect 38 1 34 0;
-#X connect 38 1 50 0;
+#X connect 38 1 57 0;
 #X connect 41 0 40 0;
 #X connect 42 0 43 0;
 #X connect 42 1 30 0;
-#X connect 42 2 53 0;
+#X connect 42 2 52 0;
 #X connect 43 0 41 0;
-#X connect 45 0 56 0;
-#X connect 52 0 50 0;
-#X connect 54 0 35 0;
-#X connect 55 0 47 1;
-#X connect 56 0 57 0;
-#X connect 56 1 49 0;
-#X connect 56 2 47 0;
-#X connect 56 3 55 0;
+#X connect 45 0 55 0;
+#X connect 51 0 57 0;
+#X connect 53 0 35 0;
+#X connect 54 0 47 1;
+#X connect 55 0 56 0;
+#X connect 55 1 49 0;
+#X connect 55 2 47 0;
+#X connect 55 3 54 0;
 #X restore 400 78 pd sequence;
 #X obj 400 56 r onOff;
 #X obj 460 236 r fibi;
-#N canvas 742 174 752 592 audio 0;
+#N canvas 742 174 752 592 audio 1;
 #X obj 1 23 inlet;
 #X obj 49 538 outlet~;
 #X obj 170 539 outlet~;
@@ -598,18 +663,18 @@ floor.;
 #X obj 160 246 r fileLenSamps;
 #X obj 1 76 sel 1 0;
 #X obj 503 202 soundfiler;
-#X floatatom 503 262 12 0 0 0 - - -, f 12;
+#X floatatom 503 262 12 0 0 0 - - -;
 #X obj 504 234 / 44100;
 #N canvas 552 305 925 542 arrays 0;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array fileL 8.99172e+06 float 0;
-#X coords 0 1 8.99172e+06 -1 200 140 1 0 0;
+#X array fileL 282660 float 0;
+#X coords 0 1 282659 -1 200 140 1 0 0;
 #X restore 97 0 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array fileR 8.99172e+06 float 0;
-#X coords 0 1 8.99172e+06 -1 200 140 1 0 0;
+#X array fileR 282660 float 0;
+#X coords 0 1 282659 -1 200 140 1 0 0;
 #X restore 108 240 graph;
-#X restore 606 77 pd arrays;
+#X restore 611 71 pd arrays;
 #X obj 555 234 s fileLenSamps;
 #X obj 617 269 r fileLenSamps;
 #X obj 617 319 s playbackRate;
@@ -620,9 +685,13 @@ floor.;
 #X obj 283 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 283 359 snapshot~;
-#X floatatom 283 440 10 0 0 0 - - -, f 10;
+#X floatatom 283 440 10 0 0 0 - - -;
 #X obj 373 483 hsl 195 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+<<<<<<< HEAD
 -1 -1 4287 1;
+=======
+-1 -1 19399 1;
+>>>>>>> origin/using-full-file-length-track1
 #X text 369 500 Playback position;
 #X obj 283 481 s playback1;
 #X text 550 25 reset buffer;
@@ -651,6 +720,8 @@ fileL fileR;
 #X obj 121 365 *;
 #X obj 178 192 t b;
 #X obj 120 474 s stop;
+#X obj 189 477 s file2PlayEnd;
+#X obj 250 517 print file2playend;
 #X connect 0 0 6 0;
 #X connect 3 0 30 0;
 #X connect 3 0 40 0;
@@ -693,6 +764,8 @@ fileL fileR;
 #X connect 39 0 7 0;
 #X connect 40 0 1 0;
 #X connect 40 1 46 0;
+#X connect 40 1 47 0;
+#X connect 40 1 48 0;
 #X connect 41 0 2 0;
 #X connect 42 0 40 0;
 #X connect 42 0 41 0;
@@ -704,19 +777,19 @@ fileL fileR;
 #X obj 9 16 inlet~;
 #X obj 22 355 s playback;
 #X obj 9 43 env~;
-#X floatatom 9 69 5 0 0 0 - - -, f 5;
+#X floatatom 9 69 5 0 0 0 - - -;
 #X obj 9 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 9 123 sel 1;
 #X obj 9 98 > 92;
-#X floatatom 48 69 5 0 0 0 - - -, f 5;
+#X floatatom 48 69 5 0 0 0 - - -;
 #X obj 90 245 t b b;
 #X msg 48 43 88;
 #X msg 77 43 95;
 #X obj 90 269 f;
 #X obj 90 334 +;
-#X floatatom 90 357 10 0 0 0 - - -, f 10;
-#X floatatom 117 334 10 0 0 0 - - -, f 10;
+#X floatatom 90 357 10 0 0 0 - - -;
+#X floatatom 117 334 10 0 0 0 - - -;
 #X obj 117 291 - 5;
 #X obj 135 245 r playback1;
 #X obj 117 269 random 10;
@@ -726,7 +799,7 @@ fileL fileR;
 #X obj 116 197 threshold~ 100 100;
 #X obj 116 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 115 46 5 0 0 0 - - -, f 5;
+#X floatatom 115 46 5 0 0 0 - - -;
 #X obj 222 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 22 323 0;
@@ -736,9 +809,9 @@ fileL fileR;
 #N canvas 0 22 450 300 skipar 0;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array skiparray 100 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
 0;
 #X coords 0 1 99 0 200 140 1 0 0;
 #X restore 123 60 graph;
@@ -800,7 +873,7 @@ fileL fileR;
 #X obj 168 193 *~;
 #X obj 158 49 noise~;
 #X obj 190 167 dbtorms;
-#X floatatom 189 149 5 0 100 0 - - -, f 5;
+#X floatatom 189 149 5 0 100 0 - - -;
 #X obj 88 47 r onOff;
 #X obj 158 117 *~;
 #X obj 206 49 r fibi;
@@ -809,7 +882,7 @@ fileL fileR;
 #X obj 292 69 r skip;
 #X obj 292 91 sel 0 1;
 #X obj 281 224 line;
-#X floatatom 281 246 5 0 0 0 - - -, f 5;
+#X floatatom 281 246 5 0 0 0 - - -;
 #X msg 279 174 \$1;
 #X obj 279 127 f;
 #X obj 280 31 r my_loadbang;
@@ -859,9 +932,9 @@ fileL fileR;
 #X obj 76 682 samphold~;
 #X obj 58 709 *~;
 #X obj 77 654 sig~;
-#X floatatom 167 394 5 0 0 0 - - -, f 5;
-#X floatatom 120 274 10 0 0 0 - - -, f 10;
-#X floatatom 89 377 5 0 0 0 - - -, f 5;
+#X floatatom 167 394 5 0 0 0 - - -;
+#X floatatom 120 274 10 0 0 0 - - -;
+#X floatatom 89 377 5 0 0 0 - - -;
 #X obj 167 368 / 44.1;
 #X obj 319 576 *~ -1;
 #X obj 319 609 +~ 1;
@@ -881,7 +954,7 @@ fileL fileR;
 #X obj 273 63 inlet;
 #X obj 383 542 *~ 44100;
 #X obj 121 581 tabread~ taaab;
-#X floatatom 370 460 5 0 0 0 - - -, f 5;
+#X floatatom 370 460 5 0 0 0 - - -;
 #X obj 378 382 r my_loadbang;
 #X msg 51 229 5750.39;
 #X obj 48 187 r my_loadbang;
@@ -972,9 +1045,9 @@ fileL fileR;
 #X obj 76 682 samphold~;
 #X obj 58 709 *~;
 #X obj 77 654 sig~;
-#X floatatom 167 394 5 0 0 0 - - -, f 5;
-#X floatatom 120 274 10 0 0 0 - - -, f 10;
-#X floatatom 89 377 5 0 0 0 - - -, f 5;
+#X floatatom 167 394 5 0 0 0 - - -;
+#X floatatom 120 274 10 0 0 0 - - -;
+#X floatatom 89 377 5 0 0 0 - - -;
 #X obj 167 368 / 44.1;
 #X obj 319 744 vd~ b1;
 #X obj 319 576 *~ -1;
@@ -1012,7 +1085,7 @@ fileL fileR;
 #X obj 383 542 *~ 44100;
 #X obj 376 571 tabread~ taaab;
 #X obj 121 581 tabread~ taaab;
-#X floatatom 370 460 5 0 0 0 - - -, f 5;
+#X floatatom 370 460 5 0 0 0 - - -;
 #X obj 379 354 r my_loadbang;
 #X msg 51 229 5750.39;
 #X obj 48 187 r my_loadbang;
@@ -1031,7 +1104,7 @@ fileL fileR;
 #X obj 185 56 clip 0 0.6;
 #X obj 342 847 s~ feedbackl;
 #X obj 97 11 r~ feedbackl;
-#X floatatom 185 78 5 0 0 0 - - -, f 5;
+#X floatatom 185 78 5 0 0 0 - - -;
 #X obj 185 34 / 100;
 #X connect 0 0 43 0;
 #X connect 2 0 10 0;
@@ -1095,13 +1168,20 @@ fileL fileR;
 #X connect 56 0 52 0;
 #X connect 58 0 54 0;
 #X restore 78 359 pd grains;
-#X floatatom 739 679 5 0 0 0 - - -, f 5;
+#X floatatom 739 679 5 0 0 0 - - -;
 #X obj 739 700 t b f;
 #X obj 691 516 vsl 15 128 100 30000 0 0 empty empty empty 0 -8 0 8
+<<<<<<< HEAD
 -262144 -1 -1 6353 1;
 #X obj 690 674 t b f;
 #X obj 739 599 vsl 15 73 -36 36 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 3600 1;
+=======
+-262144 -1 -1 0 1;
+#X obj 690 674 t b f;
+#X obj 739 599 vsl 15 73 -36 36 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+>>>>>>> origin/using-full-file-length-track1
 #X text 756 663 -36;
 #X text 708 633 100;
 #X obj 681 729 s gsize;
@@ -1113,7 +1193,7 @@ fileL fileR;
 #X obj 739 574 expr 1 - ($f1 + 1);
 #X obj 739 508 r fibi;
 #X obj 641 439 r fibi;
-#X floatatom 641 512 5 0 0 0 - - -, f 5;
+#X floatatom 641 512 5 0 0 0 - - -;
 #X obj 739 530 / 10;
 #X obj 519 116 s skiparray;
 #X msg 523 83 const 0;
@@ -1158,7 +1238,11 @@ fileL fileR;
 -1;
 #X obj 760 206 osc~ 28;
 #X obj 641 489 expr 15000 - $f1;
+<<<<<<< HEAD
 #X msg 263 592 open Wisper2.wav;
+=======
+#X obj 281 132 print onOffReceive;
+>>>>>>> origin/using-full-file-length-track1
 #X connect 0 0 1 0;
 #X connect 3 0 34 0;
 #X connect 4 0 7 0;
@@ -1184,6 +1268,7 @@ fileL fileR;
 #X connect 28 0 25 0;
 #X connect 29 0 25 0;
 #X connect 30 0 28 0;
+<<<<<<< HEAD
 #X connect 30 1 100 0;
 #X connect 31 0 21 0;
 #X connect 32 0 31 0;
@@ -1239,6 +1324,64 @@ fileL fileR;
 #X connect 83 0 81 1;
 #X connect 84 0 83 0;
 #X connect 85 0 87 0;
+=======
+#X connect 30 1 31 0;
+#X connect 31 0 25 0;
+#X connect 32 0 21 0;
+#X connect 33 0 32 0;
+#X connect 33 0 101 0;
+#X connect 34 0 16 1;
+#X connect 35 0 14 0;
+#X connect 35 0 36 0;
+#X connect 35 0 63 0;
+#X connect 35 1 64 0;
+#X connect 37 0 64 1;
+#X connect 37 0 63 1;
+#X connect 38 0 27 0;
+#X connect 39 0 38 1;
+#X connect 41 0 12 0;
+#X connect 42 0 5 0;
+#X connect 43 0 44 0;
+#X connect 44 0 50 0;
+#X connect 44 1 51 0;
+#X connect 45 0 67 0;
+#X connect 46 0 43 0;
+#X connect 46 1 50 0;
+#X connect 47 0 43 0;
+#X connect 52 0 42 1;
+#X connect 53 0 42 2;
+#X connect 54 0 41 1;
+#X connect 55 0 41 2;
+#X connect 56 0 47 0;
+#X connect 57 0 60 0;
+#X connect 58 0 66 0;
+#X connect 60 0 81 0;
+#X connect 62 0 61 0;
+#X connect 62 0 91 0;
+#X connect 63 0 42 0;
+#X connect 64 0 41 0;
+#X connect 65 0 66 1;
+#X connect 66 0 100 0;
+#X connect 67 0 46 0;
+#X connect 69 0 68 0;
+#X connect 69 0 73 0;
+#X connect 70 0 68 0;
+#X connect 71 0 70 0;
+#X connect 72 0 77 0;
+#X connect 73 0 99 1;
+#X connect 74 0 71 0;
+#X connect 75 0 69 0;
+#X connect 76 0 78 0;
+#X connect 77 0 71 0;
+#X connect 78 0 77 1;
+#X connect 79 0 16 0;
+#X connect 80 0 82 0;
+#X connect 81 0 56 0;
+#X connect 82 0 81 1;
+#X connect 83 0 85 0;
+#X connect 84 0 82 1;
+#X connect 85 0 84 0;
+>>>>>>> origin/using-full-file-length-track1
 #X connect 86 0 88 0;
 #X connect 87 0 0 0;
 #X connect 88 0 0 0;

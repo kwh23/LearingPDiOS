@@ -17,7 +17,6 @@
 }
 
 -(instancetype)initWithFile:(NSString *)pdFile{
-    void *patch;
     self = [super init];
     if (self) {
         patch = [PdBase openFile:pdFile path:[[NSBundle mainBundle]resourcePath]];
@@ -40,6 +39,10 @@
         }
     }
     return self;
+}
+
+- (void*)getPatch {
+    return patch;
 }
 
 @end
